@@ -245,7 +245,7 @@ acloud login --client-id YOUR_API_KEY --client-secret YOUR_SECRET_VALUE
 acloud compute list-cloudservers --region ITBG-Bergamo
 
 # Create a new VM instance
-acloud compute create-cloudserver --name my-vm --network-id $id --flavor-id CSO8A16 --instance-type t2.micro --region us-west
+acloud compute create-cloudserver --name my-vm --network-id $id --flavor-id CSO8A16 --template-uri /providers/Aruba.Compute/templates/6613f38eeeb8b4b04ee52c0d --region ITBG-Bergamo
 
 # Attach a volume to the VM
 acloud storage attach-blockstorage --vm-id $id --volume-id $id
