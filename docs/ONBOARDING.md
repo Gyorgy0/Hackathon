@@ -1,45 +1,83 @@
-# Steps to be Onboarded for the Hackathon
 
-1. **Fill up registration details.**
+# GitHub Repo Fork
 
-2. **Github Team creation within Arubacloud Organization.**
+Each challenge member has been invited to a team. Every team has read access to the following repositories:
 
-   ![Team Creation](./images/image-2024-8-26_15-7-13.png)
+- [ArubaCloud CLI](https://github.com/Arubacloud/bud-hackaton24-arubacloud-cli)
+- [ArubaCloud K8s Autoscaler](https://github.com/Arubacloud/bud-hackaton24-arubacloud-k8s-autoscaler)
+- [ArubaCloud SDK](https://github.com/Arubacloud/bud-hackaton24-arubacloud-sdk)
+- [ArubaCloud Terraform Provider](https://github.com/Arubacloud/bud-hackaton24-arubacloud-terraform-provider)
 
-3. **Invite Members to the associated Team.**
+To work on a team-maintained repository, one member from each team will need to fork the template repository by following these steps:
 
-   ![Invite Members](./images/image-2024-8-26_15-7-45.png)
+1. Click on **Create a new fork**  
+   ![Fork Creation Step](path-to-image)
+   
+2. Change the forked repository owner to **ArubaCloud** and update the name to `bud-hackaton24-arubacloud-cli-teamXX`, making sure to use the correct team number.
 
-4. **Create a Repository for each team.**
+3. Create the fork  
+   ![Forking Process Screenshot](path-to-image)
 
-   ![Create Repository](./images/image-2024-8-26_15-9-15.png)
+4. After landing on the forked repository, you will need to grant admin access to your team members:
+   - Go to **Settings** > **Collaborators and teams** > **Add teams**
+   - Add the `ArubaCloud/team_xx` you are in, with the role set to **admin**  
+   ![Team Settings Screenshot](path-to-image)
 
-5. **Assign the private repository created in the previous step to the team.**
+Your team is now ready to clone, pull, and push to your repository!
 
-   ![Assign Repository](./images/image-2024-8-26_15-10-27.png)
+---
 
-6. **Make sure to assign the write role to the team to enable code push.**
+# GitHub Repo Structure
 
-   ![Assign Write Role](./images/image-2024-8-26_15-11-14.png)
+```
+README.md
+.gitignore
+```
+
+```
+src/
+    main.**
+    utils.**
+    config.**
+```
+
+```
+data/
+    kaas.csv
+    cloudserver.csv
+```
+
+```
+docs/
+    index.md
+    installation.md
+```
+
+```
+tests/
+    test_main.**
+    test_utils.**
+```
+
+```
+assets/
+    logo.**
+    background.**
+```
+
+```
+config/
+    settings.**
+    db_config.**
+```
 
 ---
 
-# Task Points
+## Notes
 
-| Title                  | Task                                                                                         | Note                                                                                                                       | Points | Topic               |
-|------------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|--------|---------------------|
-| **CLI**                | Design and develop a cross-platform Command Line Interface (CLI) to use Aruba Cloud APIs      | **Must:** Develop a Golang CLI [Go CLI solutions](https://go.dev/solutions/clis).                                           | 50     | All Aruba Cloud APIs |
-|                        |                                                                                              | **Examples:**                                                                                                              |        |                     |
-|                        |                                                                                              | - [LiqoCTL](https://github.com/liqotech/liqo/tree/master/pkg/liqoctl)                                                      |        |                     |
-|                        |                                                                                              | - [Hetzner](https://github.com/hetznercloud/cli)                                                                           |        |                     |
-|                        |                                                                                              | - [DigitalOcean](https://github.com/digitalocean/doctl)                                                                    |        |                     |
-| **Kubernetes Autoscaler**| Use Aruba Cloud APIs to deliver a Kubernetes Cluster Autoscaler                              | [Kubernetes Autoscaler](https://github.com/kubernetes/autoscaler)                                                          | 20     | Kubernetes          |
-|                        |                                                                                              | **Example:** [Kubernetes Autoscaler Example](https://github.com/kubernetes/autoscaler/tree/c6b754c359a8563050933a590f9a5dece823c836/cluster-autoscaler) |        |                     |
-| **Terraform Provider**  | Develop a Terraform Provider                                                                 | [Terraform Custom Provider](https://spacelift.io/blog/terraform-custom-provider)                                            | 20     | All Aruba Cloud APIs |
-|                        |                                                                                              | **Example:** [Custom Provider Example](https://spacelift.io/blog/terraform-custom-provider)                                 |        |                     |
-| **Aruba Cloud SDK**     | Choose a language to deliver an Aruba Cloud Management SDK                                    |                                                                                                                            | 10     | All Aruba Cloud APIs |
-|                        |                                                                                              | **DotNet Example:** [Azure SDK for .NET](https://github.com/Azure/azure-sdk-for-net/tree/main)                              |        |                     |
-|                        |                                                                                              | **Java Example:** [VMWare vSphere Automation SDK for Java](https://github.com/vmware/vsphere-automation-sdk-java)           |        |                     |
-|                        |                                                                                              | **Python Example:** [Hetzner Cloud SDK for Python](https://github.com/hetznercloud/hcloud-python)                           |        |                     |
-
----
+- The `src/` folder contains the main source code for the project.
+- The `data/` folder is where Aruba Cloud Flavors (kaas, cloudservers, etc.) are stored.
+- The `docs/` folder contains documentation files.
+- The `tests/` folder includes all unit and integration tests.
+- The `assets/` folder is used for storing images and other media files.
+- The `config/` folder holds various configuration files.
