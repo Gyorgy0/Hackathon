@@ -11,17 +11,17 @@ Each challenge member has been invited to a team. Every team has read access to 
 To work on a team-maintained repository, one member from each team will need to fork the template repository by following these steps:
 
 1. Click on **Create a new fork**  
-   ![Fork Creation Step](path-to-image)
+   ![Fork Creation Step](./images/Immagine%202024-09-06%20172641.jpg)
    
 2. Change the forked repository owner to **ArubaCloud** and update the name to `bud-hackaton24-arubacloud-cli-teamXX`, making sure to use the correct team number.
 
 3. Create the fork  
-   ![Forking Process Screenshot](path-to-image)
+   ![Forking Process Screenshot](./images/Screenshot%202024-09-06%20172906.jpg)
 
 4. After landing on the forked repository, you will need to grant admin access to your team members:
    - Go to **Settings** > **Collaborators and teams** > **Add teams**
    - Add the `ArubaCloud/team_xx` you are in, with the role set to **admin**  
-   ![Team Settings Screenshot](path-to-image)
+   ![Team Settings Screenshot](./images/Screenshot%202024-09-06%20173607.jpg)
 
 Your team is now ready to clone, pull, and push to your repository!
 
