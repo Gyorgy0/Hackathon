@@ -71,6 +71,7 @@ func init() {
 	rootCmd.AddCommand(loginCmd)
 	loginCmd.Flags().String("client-id", "", "specifies the api-key")
 	loginCmd.Flags().String("client-secret", "", "specifies the secret key")
+
 	viper.AddConfigPath("./cmd")
 	viper.SetConfigName("config")
 	viper.SetConfigType("env")
