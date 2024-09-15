@@ -14,9 +14,6 @@ import (
 	"github.com/spf13/viper"
 )
 
-var stored_api_key string
-var stored_api_secret string
-
 // loginCmd represents the login command
 var loginCmd = &cobra.Command{
 	Use: "login",
@@ -66,10 +63,7 @@ var loginCmd = &cobra.Command{
 			return
 		}
 
-		stored_api_key = api_key
 		fmt.Println("Access Token:", data.AccessToken)
-		viper.AutomaticEnv()
-		viper.Set("APIKEY", "asdi")
 	},
 }
 
